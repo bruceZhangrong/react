@@ -11,17 +11,26 @@
 <script src="react/react-dom.min.js"></script>
 <script src="https://unpkg.com/babel-core@5.8.38/browser.min.js"></script>
 <script type="text/babel">
+	var style = {
+		'border' : '1px solid #000',
+		'color' : 'red',
+		'background' : 'yellow'
+	}
 	var MessageBox = React.createClass({
 		render: function() {
 			return (
-				<h1 className="msg-box">
-					hello world!
-				</h1>		
-			);
-		}
+							<ul>
+								<li key="1">1</li>
+								<li key="2">2</li>
+								<li key="3">3</li>
+								<li key="4">4</li>
+								<li key="5">5</li>
+							</ul>	
+					);
+			}
 	});
 
-	ReactDOM.render( <MessageBox/>, document.getElementById('app'));
+	ReactDOM.render( <div style={ style }><MessageBox/></div>, document.getElementById('app'));
 </script>
 </body>
 </html>
