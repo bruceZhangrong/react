@@ -1,6 +1,6 @@
    
   require.config({
-    baseUrl:"/mobile/src/js",
+    baseUrl:"//src/js",
     waitSeconds:0,
     paths : {
         // "jquery":"common/jquery.min",
