@@ -1,73 +1,13 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>first class</title>
-	
+	<title>bruceBlog</title>
+
 </head>
 <body>
-	<div id="app"></div>
-<script src="//cdn.bootcss.com/jquery/3.1.0/jquery.min.js"></script>
-<script src="react/react.min.js"></script>
-<script src="react/react-dom.min.js"></script>
-<script src="https://unpkg.com/babel-core@5.8.38/browser.min.js"></script>
-<script type="text/babel">
-	var style = {
-		'border' : '1px solid #000',
-		'color' : 'red',
-		'background' : 'yellow'
-	}
-	var Content = React.createClass({
-		getInitialState: function() {
-			return {
-				inputText: ''
-			}
-		},
-		handleChange: function(event) {
-			return this.setState({inputText: event.target.value})
-		},
-		handleButton: function() {
-			console.log('replay to:' + this.props.selectName + "\n" + this.state.inputText);
-		},
-		render: function() {
-			return (
-				<div>
-					<br />
-					<textarea onChange={ this.handleChange } placeholder="Please enter something..."></textarea>
-					<br />
-					<br />
-					<button onClick={ this.handleButton }>点击提交</button>	
-				</div>
-			)
-		}
-	});
-	var Comment = React.createClass({
-		getInitialState: function() {
-			return { 
-				names: ['zhang','lu','li'],
-				selectName: ''
-			}
-		},
-		handleSelect: function(event) {
-			return this.setState({selectName: event.target.value})
-		},
-		render: function() {
-			var options = [];
-			for (var option in this.state.names) {
-				options.push(<option value={ this.state.names[option]}>{ this.state.names[option] }</option>);
-			}
-			return(
-				<div>
-					<select onChange={this.handleSelect}>
-						{options}
-					</select>
-					<Content selectName={ this.state.selectName }></Content>
-				</div>
-			)
-		}
-
-	});
-	ReactDOM.render(<Comment></Comment>, document.getElementById("app"));
-
-</script>
+	
 </body>
+<script data-main="src/main" src="src/require"></script>
+
 </html>
